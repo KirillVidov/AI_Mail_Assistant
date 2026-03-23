@@ -1,0 +1,53 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# PyCharm
+.idea/
+
+# Models (large files)
+*.pth
+*.pkl
+*.h5
+*.model
+
+# Data (large files)
+data/
+*.csv
+*.json
+*.tar.gz
+*.zip
+
+# Images
+*.png
+*.jpg
+*.jpeg
+
+# Credentials (sensitive)
+credentials.json
+token.json
+client_secret*.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Temporary
+*.tmp
+*.bak
+*.swp
+*~

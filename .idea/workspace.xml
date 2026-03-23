@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3f3f9524-093e-48c2-af1e-9e51c357fae9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/AI_Mail_Assistant.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/architecture.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/classify_emails.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/download_labeled_dataset.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/email_replies.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/gmail_integration.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/parsing.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/seq2seq_architecture.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/train_labeled.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/train_model.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/vocabulary.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="39ftVNwnXIPIw5UK9la6Iyy9nB6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.add_labels.executor": "Run",
+    "Python.ai_demo.executor": "Run",
+    "Python.architecture.executor": "Run",
+    "Python.classify_emails.executor": "Run",
+    "Python.download_labeled_dataset.executor": "Run",
+    "Python.email_replies.executor": "Run",
+    "Python.gmail_integration.executor": "Run",
+    "Python.parsing.executor": "Run",
+    "Python.prepare_data.executor": "Run",
+    "Python.seq2seq_architecture.executor": "Run",
+    "Python.train_labeled.executor": "Run",
+    "Python.train_model.executor": "Run",
+    "Python.train_seq2seq.executor": "Run",
+    "Python.vocabulary.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/kiril/PycharmProjects/AI_Mail_Assistant"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant" />
+      <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant\data\raw" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant" />
+      <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant\data\raw" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3f3f9524-093e-48c2-af1e-9e51c357fae9" name="Changes" comment="" />
+      <created>1771098975711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771098975711</updated>
+    </task>
+    <servers />
+  </component>
+</project>
