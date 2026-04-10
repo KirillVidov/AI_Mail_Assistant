@@ -270,26 +270,7 @@ class GmailEmailAssistant:
 
 
 def setup_instructions():
-    print("=" * 60)
-    print("GMAIL INTEGRATION SETUP")
-    print("=" * 60)
-    print("\nTo use this script, you need to:")
-    print("\n1. Go to: https://console.cloud.google.com")
-    print("2. Create a new project (or select existing)")
-    print("3. Enable Gmail API:")
-    print("   - APIs & Services > Enable APIs and Services")
-    print("   - Search 'Gmail API' > Enable")
-    print("\n4. Create credentials:")
-    print("   - APIs & Services > Credentials")
-    print("   - Create Credentials > OAuth client ID")
-    print("   - Application type: Desktop app")
-    print("   - Download JSON")
-    print("\n5. Rename downloaded file to 'credentials.json'")
-    print("6. Place it in this project folder")
-    print("\n7. Install dependencies:")
-    print("   pip install google-auth-oauthlib google-auth google-api-python-client")
-    print("\n8. Run this script again")
-    print("=" * 60)
+    return none
 
 
 def main():

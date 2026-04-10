@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f3f9524-093e-48c2-af1e-9e51c357fae9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AI_Mail_Assistant.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmail_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/gmail_integration.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,18 +54,22 @@
     "Python.classify_emails.executor": "Run",
     "Python.download_labeled_dataset.executor": "Run",
     "Python.email_replies.executor": "Run",
+    "Python.email_style_assistant_personalized.executor": "Run",
     "Python.gmail_integration.executor": "Run",
     "Python.parsing.executor": "Run",
     "Python.prepare_data.executor": "Run",
     "Python.seq2seq_architecture.executor": "Run",
+    "Python.test.executor": "Run",
     "Python.train_labeled.executor": "Run",
     "Python.train_model.executor": "Run",
     "Python.train_seq2seq.executor": "Run",
+    "Python.train_style_transfer.executor": "Run",
     "Python.vocabulary.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/kiril/PycharmProjects/AI_Mail_Assistant"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kiril/PycharmProjects/AI_Mail_Assistant",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,6 +81,31 @@
       <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant" />
       <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant\data\raw" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="gmail_integration" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="AI_Mail_Assistant" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (mailsorter)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gmail_integration.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
