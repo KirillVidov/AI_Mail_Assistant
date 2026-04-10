@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f3f9524-093e-48c2-af1e-9e51c357fae9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmail_integration.py" beforeDir="false" afterPath="$PROJECT_DIR$/gmail_integration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +29,16 @@
     <setting file="file://$PROJECT_DIR$/classify_emails.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/download_labeled_dataset.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/email_replies.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/email_style_assistant_personalized.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/gmail_integration.py" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/parsing.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/seq2seq_architecture.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/train_labeled.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/train_model.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/vocabulary.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -46,32 +51,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.add_labels.executor": "Run",
-    "Python.ai_demo.executor": "Run",
-    "Python.architecture.executor": "Run",
-    "Python.classify_emails.executor": "Run",
-    "Python.download_labeled_dataset.executor": "Run",
-    "Python.email_replies.executor": "Run",
-    "Python.email_style_assistant_personalized.executor": "Run",
-    "Python.gmail_integration.executor": "Run",
-    "Python.parsing.executor": "Run",
-    "Python.prepare_data.executor": "Run",
-    "Python.seq2seq_architecture.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.train_labeled.executor": "Run",
-    "Python.train_model.executor": "Run",
-    "Python.train_seq2seq.executor": "Run",
-    "Python.train_style_transfer.executor": "Run",
-    "Python.vocabulary.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/kiril/PycharmProjects/AI_Mail_Assistant",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.add_labels.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ai_demo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.architecture.executor&quot;: &quot;Run&quot;,
+    &quot;Python.classify_emails.executor&quot;: &quot;Run&quot;,
+    &quot;Python.download_labeled_dataset.executor&quot;: &quot;Run&quot;,
+    &quot;Python.email_replies.executor&quot;: &quot;Run&quot;,
+    &quot;Python.email_style_assistant_personalized.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gmail_integration.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parsing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.seq2seq_architecture.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_labeled.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_seq2seq.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train_style_transfer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.vocabulary.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kiril/PycharmProjects/AI_Mail_Assistant&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\kiril\PycharmProjects\AI_Mail_Assistant" />
