@@ -31,7 +31,7 @@ print(f"SPAM: {len(df_spam)} писем")
 print(f"PROMO: {len(df_promo)} писем")
 
 # Целевое количество для каждой категории
-target_samples = 3000
+target_samples = 5000
 
 print(f"\n2. Балансировка до {target_samples} писем на категорию...")
 
