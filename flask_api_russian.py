@@ -49,22 +49,26 @@ classifier_model.eval()
 
 print("✓ Русская модель классификации загружена")
 
-# Инициализация HuggingFace API с РУССКОЙ моделью T5
-print("Инициализация HuggingFace Inference API (русская модель)...")
+# Инициализация YandexGPT API
+print("Инициализация YandexGPT API...")
 
-# Токен берется из переменной окружения
-HF_API_TOKEN = os.getenv('HF_API_TOKEN')
+# Токены берутся из переменных окружения
+YANDEX_API_KEY = os.getenv('YANDEX_API_KEY')
+YANDEX_FOLDER_ID = os.getenv('YANDEX_FOLDER_ID')
 
-if not HF_API_TOKEN or HF_API_TOKEN == 'YOUR_HF_TOKEN':
-    print("⚠️  ВНИМАНИЕ: HuggingFace токен не найден!")
-    print("   Создайте файл .env и добавьте: HF_API_TOKEN=ваш_токен")
-    print("   Или установите переменную окружения HF_API_TOKEN")
+if not YANDEX_API_KEY or YANDEX_API_KEY == 'YOUR_YANDEX_API_KEY':
+    print("⚠️  ВНИМАНИЕ: YandexGPT API ключ не найден!")
+    print("   Создайте файл .env и добавьте:")
+    print("   YANDEX_API_KEY=ваш_ключ")
+    print("   YANDEX_FOLDER_ID=ваш_folder_id")
 
-# РУССКАЯ модель T5 для перефразирования
-HF_API_URL = "https://api-inference.huggingface.co/models/cointegrated/rut5-base-paraphraser"
-HF_HEADERS = {"Authorization": f"Bearer {HF_API_TOKEN}"}
+YANDEX_GPT_URL = "https://llm.api.cloud.yandex.net/foundationModels/v1/completion"
+YANDEX_HEADERS = {
+    "Authorization": f"Api-Key {YANDEX_API_KEY}",
+    "Content-Type": "application/json"
+}
 
-print("✓ HuggingFace API готов к работе (русская T5)")
+print("✓ YandexGPT API готов к работе")
 
 CATEGORIES = ['work', 'personal', 'spam', 'promo']
 
@@ -145,29 +149,45 @@ def normalize_russian_slang(text):
 
 
 def rephrase_text(text, category='work', max_length=128):
-    """Перефразирование текста с помощью русской HuggingFace T5 API"""
+    """Перефразирование текста с помощью YandexGPT API"""
 
     try:
         # Нормализация сленга
         normalized = normalize_russian_slang(text)
 
-        # Русская модель ruT5 работает немного по-другому
-        # Она ожидает просто текст без промпта "paraphrase:"
+        # Промпты для разных стилей
+        prompts = {
+            'work': f"Перефразируй следующий текст в деловом стиле, сохранив смысл:\n\n{normalized}\n\nПерефразированный текст:",
+            'personal': f"Перефразируй следующий текст в дружеском разговорном стиле:\n\n{normalized}\n\nПерефразированный текст:",
+            'promo': f"Перефразируй следующий текст в рекламном стиле:\n\n{normalized}\n\nПерефразированный текст:",
+            'spam': f"Перефразируй следующий текст:\n\n{normalized}\n\nПерефразированный текст:"
+        }
 
-        # Запрос к API
+        prompt = prompts.get(category, prompts['work'])
+
+        # Запрос к YandexGPT
         payload = {
-            "inputs": normalized,
-            "parameters": {
-                "max_length": max_length,
-                "temperature": 0.7,
-                "num_beams": 5,
-                "do_sample": False
-            }
+            "modelUri": f"gpt://{YANDEX_FOLDER_ID}/yandexgpt-lite",
+            "completionOptions": {
+                "stream": False,
+                "temperature": 0.6,
+                "maxTokens": max_length
+            },
+            "messages": [
+                {
+                    "role": "system",
+                    "text": "Ты - помощник для перефразирования текстов. Перефразируй текст, сохраняя его смысл, но изменяя формулировку."
+                },
+                {
+                    "role": "user",
+                    "text": prompt
+                }
+            ]
         }
 
         response = requests.post(
-            HF_API_URL,
-            headers=HF_HEADERS,
+            YANDEX_GPT_URL,
+            headers=YANDEX_HEADERS,
             json=payload,
             timeout=30
         )
@@ -175,29 +195,18 @@ def rephrase_text(text, category='work', max_length=128):
         if response.status_code == 200:
             result = response.json()
 
-            if isinstance(result, list) and len(result) > 0:
-                # ruT5 возвращает список с generated_text
-                paraphrased = result[0].get('generated_text', normalized)
-                return paraphrased.strip()
-            elif isinstance(result, dict):
-                # Или может вернуть dict
-                if 'generated_text' in result:
-                    return result['generated_text'].strip()
-                elif 'translation_text' in result:
-                    return result['translation_text'].strip()
-                else:
-                    print(f"Неожиданный формат: {result}")
-                    return normalized
-            else:
-                print(f"Неожиданный формат: {result}")
-                return normalized
+            # YandexGPT возвращает результат в result.alternatives[0].message.text
+            if 'result' in result and 'alternatives' in result['result']:
+                alternatives = result['result']['alternatives']
+                if len(alternatives) > 0:
+                    rephrased = alternatives[0]['message']['text'].strip()
+                    return rephrased
 
-        elif response.status_code == 503:
-            print("Модель загружается, подождите 20 сек...")
+            print(f"Неожиданный формат ответа YandexGPT: {result}")
             return normalized
 
         else:
-            print(f"Ошибка HF API: {response.status_code} - {response.text}")
+            print(f"Ошибка YandexGPT API: {response.status_code} - {response.text}")
             return normalized
 
     except Exception as e:
@@ -285,13 +294,21 @@ def compose():
         draft = data.get('draft', '')
         recipient_name = data.get('recipient_name')
         sender_name = data.get('sender_name', 'Пользователь')
+        force_category = data.get('force_category')  # Принудительная категория
 
         if not draft:
             return jsonify({'error': 'No draft provided'}), 400
 
-        # 1. Классификация
-        classification = classify_email(draft)
-        category = classification['category']
+        # 1. Определение категории
+        if force_category:
+            # Используем категорию письма вместо классификации черновика
+            category = force_category
+            confidence = 100.0
+        else:
+            # Классификация черновика (старое поведение)
+            classification = classify_email(draft)
+            category = classification['category']
+            confidence = classification['confidence']
 
         # 2. Перефразирование
         rephrased = rephrase_text(draft, category)
@@ -306,7 +323,7 @@ def compose():
         return jsonify({
             'draft': draft,
             'category': category,
-            'confidence': classification['confidence'],
+            'confidence': confidence,
             'greeting': greeting,
             'body': rephrased,
             'signature': signature,
