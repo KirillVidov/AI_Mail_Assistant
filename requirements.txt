@@ -1,0 +1,26 @@
+# Web framework
+flask==2.3.3
+flask-cors==4.0.0
+
+# Machine Learning
+torch==2.0.1
+numpy==1.24.3
+pandas==2.0.3
+
+# Google API
+google-auth==2.22.0
+google-auth-oauthlib==1.0.0
+google-auth-httplib2==0.1.1
+google-api-python-client==2.97.0
+
+# NLP / Tokenization
+nltk==3.8.1
+
+# Environment variables
+python-dotenv==1.0.0
+
+# HTTP requests
+requests==2.31.0
+
+# Serialization
+pickle5==0.0.12
