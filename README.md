@@ -84,6 +84,7 @@ python auto_classifier_service_russian.py
 **Терминал 3 — cloudflare туннель:**
 ```bash
 cloudflared tunnel --protocol http2 --url http://localhost:5000
+ngrok http 5000
 # Скопировать URL вида https://abc123.ngrok-free.app
 ```
 
