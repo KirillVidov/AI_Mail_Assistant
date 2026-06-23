@@ -81,9 +81,9 @@ python auto_classifier_service_russian.py
 # При первом запуске откроется браузер для авторизации Gmail
 ```
 
-**Терминал 3 — ngrok туннель:**
+**Терминал 3 — cloudflare туннель:**
 ```bash
-ngrok http 5000
+cloudflared tunnel --protocol http2 --url http://localhost:5000
 # Скопировать URL вида https://abc123.ngrok-free.app
 ```
 
